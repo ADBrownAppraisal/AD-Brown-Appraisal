@@ -3,37 +3,43 @@
 <head><meta name="google-site-verification" content="cG7m1smZ3NR-kxPa79o6mEabYOE-i4-hgL3qvgRbUM0" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AD Brown Appraisal | Luxury Real Estate Valuation Aldie, VA</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <title>AD Brown Appraisal | Luxury Real Estate Valuation Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="family">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        /* --- Luxury Theme Variables --- */
+        /* CSS RESET & VARIABLES */
         :root {
-            --primary: #0A192F; /* Deep Luxury Navy */
-            --accent: #C5A880;  /* Warm Premium Gold */
-            --accent-hover: #A3875D;
-            --text-dark: #1E293B;
-            --text-light: #F8FAFC;
-            --bg-light: #F9F6F0; /* Soft Warm Cream */
-            --bg-white: #FFFFFF;
+            --primary: #0B1325; /* Deep Luxury Navy */
+            --secondary: #1C2A4A; /* Lighter Navy */
+            --accent: #C5A880; /* Premium Gold / Champagne */
+            --accent-hover: #B3956B;
+            --text-light: #FFFFFF;
+            --text-dark: #222222;
+            --text-muted: #666666;
+            --bg-light: #F9F9FB;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Montserrat', sans-serif;
             --transition: all 0.3s ease;
         }
 
-        /* --- Reset & Base Styles --- */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Playfair Display', 'Segoe UI', serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
+            font-family: var(--font-sans);
             color: var(--text-dark);
-            background-color: var(--bg-white);
             line-height: 1.6;
-        }
-
-        p, li, a {
-            font-family: 'Montserrat', sans-serif;
+            background-color: #ffffff;
         }
 
         a {
@@ -42,45 +48,72 @@
             transition: var(--transition);
         }
 
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
         .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .section-padding {
-            padding: 80px 0;
-        }
-
         .section-title {
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
             text-align: center;
-            font-size: 2.5rem;
+            margin-bottom: 15px;
             color: var(--primary);
-            margin-bottom: 50px;
-            position: relative;
+            font-weight: 600;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+            font-size: 1rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
 
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
+        /* BUTTONS */
+        .btn-gold {
+            display: inline-block;
             background-color: var(--accent);
-            margin: 15px auto 0;
+            color: var(--primary);
+            padding: 14px 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            border: 1px solid var(--accent);
+            transition: var(--transition);
+            cursor: pointer;
         }
 
-        /* --- Header & Navigation --- */
+        .btn-gold:hover {
+            background-color: transparent;
+            color: var(--accent);
+        }
+
+        /* HEADER & NAVIGATION */
         header {
             background-color: var(--primary);
             position: sticky;
             top: 0;
             z-index: 1000;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(197, 168, 128, 0.2);
         }
 
-        .nav-container {
+        .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -93,27 +126,32 @@
             gap: 15px;
         }
 
-        .logo-img {
-            height: 60px;
+        .logo-area img {
+            height: 55px;
+            width: auto;
             object-fit: contain;
         }
 
         .brand-name {
-            color: var(--bg-light);
-            font-size: 1.5rem;
-            font-weight: 700;
+            font-family: var(--font-serif);
+            color: var(--text-light);
+            font-size: 1.6rem;
+            font-weight: 600;
             letter-spacing: 1px;
         }
 
-        .nav-menu {
+        .brand-name span {
+            color: var(--accent);
+        }
+
+        nav ul {
             display: flex;
-            list-style: none;
             gap: 30px;
         }
 
-        .nav-menu a {
-            color: var(--bg-light);
-            font-size: 0.95rem;
+        nav ul a {
+            color: var(--text-light);
+            font-size: 0.9rem;
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -121,33 +159,31 @@
             position: relative;
         }
 
-        .nav-menu a::after {
+        nav ul a::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             width: 0;
-            height: 2px;
+            height: 1px;
             background-color: var(--accent);
             transition: var(--transition);
         }
 
-        .nav-menu a:hover::after {
+        nav ul a:hover::after {
             width: 100%;
         }
 
-        .nav-menu a:hover {
+        nav ul a:hover {
             color: var(--accent);
         }
 
-        /* --- Hero Section --- */
+        /* HERO SECTION */
         .hero {
             position: relative;
-            height: 80vh;
-            min-height: 500px;
-            background: linear-gradient(rgba(10, 25, 47, 0.75), rgba(10, 25, 47, 0.75)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
+            background: linear-gradient(rgba(11, 19, 37, 0.85), rgba(11, 19, 37, 0.85)), 
+                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            padding: 160px 0;
             color: var(--text-light);
             text-align: center;
         }
@@ -158,88 +194,106 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-            line-height: 1.2;
+            font-family: var(--font-serif);
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+            display: block;
+            font-style: italic;
+            font-weight: 600;
         }
 
         .hero p {
             font-size: 1.2rem;
-            margin-bottom: 35px;
-            color: #E2E8F0;
             font-weight: 300;
+            margin-bottom: 40px;
+            color: #E2E8F0;
+            letter-spacing: 0.5px;
         }
 
-        .btn-luxury {
-            background-color: var(--accent);
-            color: var(--primary);
-            padding: 15px 35px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: 2px solid var(--accent);
-            cursor: pointer;
-            display: inline-block;
-        }
-
-        .btn-luxury:hover {
-            background-color: transparent;
-            color: var(--accent);
-        }
-
-        /* --- About Us Section --- */
+        /* ABOUT US SECTION */
         .about {
-            background-color: var(--bg-light);
+            padding: 100px 0;
+            background-color: #ffffff;
         }
 
-        .about-grid {
+        .about-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            gap: 60px;
             align-items: center;
         }
 
+        .about-text h2 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
         .about-text p {
-            margin-bottom: 20px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
             font-size: 1.05rem;
-            color: #4A5568;
         }
 
-        .about-image img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
+        .about-img {
+            position: relative;
+        }
+
+        .about-img img {
             border-radius: 4px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            border-bottom: 5px solid var(--accent);
+            box-shadow: 20px 20px 0px var(--accent);
         }
 
-        /* --- Services Section --- */
+        /* SERVICES SECTION */
+        .services {
+            padding: 100px 0;
+            background-color: var(--bg-light);
+        }
+
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 30px;
+            margin-bottom: 50px;
         }
 
         .service-card {
-            background: var(--bg-white);
-            border: 1px solid #E2E8F0;
-            border-bottom: 3px solid transparent;
+            background: #ffffff;
+            border-radius: 4px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            border: 1px solid #EAEAEA;
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
-            border-bottom-color: var(--accent);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: var(--accent);
         }
 
         .service-img {
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .service-img img {
             width: 100%;
-            height: 200px;
+            height: 100%;
             object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-img img {
+            scale: 1.1;
         }
 
         .service-info {
@@ -247,19 +301,26 @@
         }
 
         .service-info h3 {
-            font-size: 1.3rem;
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
             color: var(--primary);
             margin-bottom: 12px;
         }
 
         .service-info p {
+            color: var(--text-muted);
             font-size: 0.95rem;
-            color: #64748B;
         }
 
-        /* --- Reviews Section --- */
+        .services-cta-box {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* REVIEWS SECTION */
         .reviews {
-            background-color: var(--bg-light);
+            padding: 100px 0;
+            background-color: #ffffff;
         }
 
         .reviews-grid {
@@ -269,69 +330,108 @@
         }
 
         .review-card {
-            background: var(--bg-white);
-            padding: 40px 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            background-color: var(--bg-light);
+            padding: 40px;
+            border-radius: 4px;
+            border-top: 4px solid var(--accent);
             position: relative;
         }
 
         .stars {
-            color: var(--accent);
+            color: #FFD700;
             margin-bottom: 15px;
+            font-size: 0.9rem;
         }
 
-        .review-text {
+        .review-card p {
             font-style: italic;
-            color: #4A5568;
+            color: var(--text-dark);
             margin-bottom: 20px;
         }
 
         .reviewer-name {
             font-weight: 600;
             color: var(--primary);
+            font-size: 0.95rem;
             text-transform: uppercase;
-            font-size: 0.85rem;
             letter-spacing: 1px;
         }
 
-        /* --- FAQs Section --- */
-        .faq-container {
+        .review-card i.quote-icon {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 3rem;
+            color: rgba(197, 168, 128, 0.15);
+        }
+
+        /* FAQ SECTION */
+        .faq {
+            padding: 100px 0;
+            background-color: var(--bg-light);
+        }
+
+        .faq-wrapper {
             max-width: 800px;
             margin: 0 auto;
         }
 
         .faq-item {
-            background: var(--bg-white);
-            border: 1px solid #E2E8F0;
+            background: #ffffff;
             margin-bottom: 15px;
-            padding: 20px;
+            border: 1px solid #EAEAEA;
+            border-radius: 4px;
+            overflow: hidden;
         }
 
         .faq-question {
-            font-size: 1.15rem;
+            padding: 22px 30px;
+            font-weight: 500;
+            font-size: 1.1rem;
             color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 10px;
+            cursor: pointer;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 10px;
+            transition: var(--transition);
         }
 
-        .faq-question i {
-            color: var(--accent);
+        .faq-question:hover {
+            background-color: rgba(197, 168, 128, 0.05);
         }
 
         .faq-answer {
-            color: #64748B;
-            padding-left: 25px;
-            font-size: 0.95rem;
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            color: var(--text-muted);
+            font-size: 1rem;
+            border-top: 0 solid transparent;
         }
 
-        /* --- Footer Section --- */
+        .faq-item.active .faq-answer {
+            padding: 20px 30px;
+            max-height: 200px;
+            border-top: 1px solid #EAEAEA;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+            color: var(--accent);
+        }
+
+        .faq-question i {
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        /* FOOTER */
         footer {
             background-color: var(--primary);
             color: var(--text-light);
-            padding: 80px 0 20px;
+            padding: 80px 0 30px 0;
+            border-top: 3px solid var(--accent);
         }
 
         .footer-grid {
@@ -341,17 +441,13 @@
             margin-bottom: 60px;
         }
 
-        .footer-heading {
+        .footer-col h4 {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
             color: var(--accent);
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
             margin-bottom: 25px;
-            position: relative;
-        }
-
-        .footer-links {
-            list-style: none;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
 
         .footer-links li {
@@ -363,230 +459,257 @@
             padding-left: 5px;
         }
 
-        .contact-info-list {
-            list-style: none;
-        }
-
         .contact-info-list li {
             display: flex;
             align-items: flex-start;
-            gap: 12px;
+            gap: 15px;
             margin-bottom: 15px;
-            font-size: 0.95rem;
-            color: #CBD5E1;
+            color: #D1D5DB;
         }
 
         .contact-info-list i {
             color: var(--accent);
-            margin-top: 4px;
+            margin-top: 5px;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 200px;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid rgba(197, 168, 128, 0.3);
         }
 
         .map-container iframe {
             width: 100%;
-            height: 200px;
-            border: 0;
+            height: 100%;
         }
 
         .footer-bottom {
-            border-top: 1px solid #1E293B;
-            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
             text-align: center;
-            font-size: 0.9rem;
-            color: #94A3B8;
+            font-size: 0.85rem;
+            color: #9CA3AF;
         }
 
-        /* --- Responsive Queries --- */
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 992px) {
+            .about-wrapper {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero h1 { font-size: 3rem; }
+        }
+
         @media (max-width: 768px) {
-            .nav-container {
+            .header-container {
                 flex-direction: column;
                 gap: 15px;
             }
-            .nav-menu {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .hero h1 {
-                font-size: 2.3rem;
-            }
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-            .section-title {
-                font-size: 2rem;
-            }
+            nav ul { gap: 15px; }
+            .section-title { font-size: 2.2rem; }
+            .hero h1 { font-size: 2.5rem; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="container nav-container">
+        <div class="container header-container">
             <div class="logo-area">
-                <img src="https://adbrownappraisal.com/wp-content/uploads/2026/05/PNG-Logo.png" alt="AD Brown Appraisal Logo" class="logo-img">
-                <span class="brand-name">AD Brown Appraisal</span>
+                <img src="https://adbrownappraisal.com/wp-content/uploads/2026/05/PNG-Logo.png" alt="AD Brown Appraisal Logo" onerror="this.style.display='none'">
+                <div class="brand-name">AD Brown <span>Appraisal</span></div>
             </div>
             <nav>
-                <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
+                <ul>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="https://adbrownappraisal.com" target="_blank">Blog</a></li>
+                    <li><a href="#faq">FAQs</a></li>
                     <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="home" class="hero">
+    <section class="hero">
         <div class="container hero-content">
-            <h1>Trusted Real Estate Valuations & Appraisals</h1>
-            <p>Certified, accurate, and timely appraisal reports built on profound local market expertise in Aldie, VA and surrounding communities.</p>
-            <a href="https://g.page/r/CTrGKFBm9oFvEBM/" target="_blank" class="btn-luxury">Schedule An Appraisal</a>
+            <h1>Trusted Real Estate Valuations <span>In Aldie, Virginia</span></h1>
+            <p>AD Brown Appraisal provides certified, precise, and timely residential property valuation reports engineered for modern market demands.</p>
+            <a href="#contact" class="btn-gold">Schedule an Appraisal</a>
         </div>
     </section>
 
-    <section id="about" class="about section-padding">
-        <div class="container">
-            <h2 class="section-title">About Our Firm</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>AD Brown Appraisals provides trusted home appraisal and real estate valuation services in Aldie, VA. Our certified appraisers deliver accurate, timely reports for home purchases, refinancing, estate planning, divorce settlements, tax appeals, and property investments.</p>
-                    <p>AD Brown Appraisal is committed to professional service, local market expertise, and reliable property valuations throughout Aldie and surrounding Virginia communities.</p>
-                    <a href="#services" class="btn-luxury" style="padding: 10px 25px; font-size: 0.9rem; margin-top: 15px;">Explore Services</a>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Luxury Home in Virginia">
-                </div>
+    <section id="about" class="about">
+        <div class="container about-wrapper">
+            <div class="about-text">
+                <h2>Premier Real Estate Valuation Experts</h2>
+                <p>AD Brown Appraisals provides trusted home appraisal and real estate valuation services in Aldie, VA. Our certified appraisers deliver accurate, timely reports for home purchases, refinancing, estate planning, divorce settlements, tax appeals, and property investments.</p>
+                <p>AD Brown Appraisal is committed to professional service, local market expertise, and reliable property valuations throughout Aldie and surrounding Virginia communities.</p>
+                <a href="https://adbrownappraisal.com/about-us/" target="_blank" class="btn-gold">Learn More About Us</a>
+            </div>
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&h=450&q=80" alt="Luxury Real Estate Office">
             </div>
         </div>
     </section>
 
-    <section id="services" class="services section-padding">
+    <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Our Premier Valuation Services</h2>
+            <h2 class="section-title">Our Valuation Services</h2>
+            <p class="section-subtitle">Certified Appraisal Protocols for Every Property Type</p>
+            
             <div class="services-grid">
-                
                 <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=500&q=80" alt="Home Appraisals" class="service-img">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=400&q=80" alt="Home Appraisals">
+                    </div>
                     <div class="service-info">
                         <h3>Home Appraisals</h3>
-                        <p>Comprehensive and highly detailed market analysis for single-family residences ensuring precision value identification.</p>
+                        <p>Comprehensive valuation profiles for single-family residences ensuring true market reflection.</p>
                     </div>
                 </div>
-
                 <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=500&q=80" alt="Lending & Mortgage Appraisals" class="service-img">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&w=400&q=80" alt="Lending & Mortgage Appraisals">
+                    </div>
                     <div class="service-info">
                         <h3>Lending & Mortgage Appraisals</h3>
-                        <p>Dependable financial valuation documentation aligned closely with strict underwriting and regulatory standards.</p>
+                        <p>Lender-grade standard compliance appraisal products for seamless mortgage processing.</p>
                     </div>
                 </div>
-
                 <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=500&q=80" alt="Townhouse Appraisal" class="service-img">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=400&q=80" alt="Townhouse Appraisal">
+                    </div>
                     <div class="service-info">
                         <h3>Townhouse Appraisal</h3>
-                        <p>Expert evaluation taking into account complex multi-unit neighborhood dynamics and structural values.</p>
+                        <p>Specific market trend and local comparative valuation mapping for modern multi-story townhomes.</p>
                     </div>
                 </div>
-
                 <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&fit=crop&w=500&q=80" alt="Condominium Appraisal" class="service-img">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=400&q=80" alt="Condominium Appraisal">
+                    </div>
                     <div class="service-info">
                         <h3>Condominium Appraisal</h3>
-                        <p>Specialized assessment focused on individual unit values alongside comprehensive complex amenity reviews.</p>
+                        <p>Expert assessments prioritizing complex association rules, shared assets, and unit conditions.</p>
                     </div>
                 </div>
+            </div>
 
+            <div class="services-cta-box">
+                <a href="https://adbrownappraisal.com/services/" target="_blank" class="btn-gold">Explore Services</a>
             </div>
         </div>
     </section>
 
-    <section class="reviews section-padding">
+    <section class="reviews">
         <div class="container">
             <h2 class="section-title">Client Testimonials</h2>
+            <p class="section-subtitle">What Our Valued Clients in Virginia Say</p>
+            
             <div class="reviews-grid">
-                
                 <div class="review-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="review-text">"AD Brown Appraisal delivered an incredibly detailed, precise report ahead of schedule. Their local expertise in Aldie was plainly obvious."</p>
-                    <p class="reviewer-name">- Jonathan R., Homeowner</p>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"The team at AD Brown was incredibly professional. Their appraisal report for our refinancing was highly detailed, accurate, and delivered ahead of schedule."</p>
+                    <div class="reviewer-name">Sarah M. — Aldie, VA</div>
+                    <i class="fas fa-quote-right quote-icon"></i>
                 </div>
-
                 <div class="review-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="review-text">"Seamless process during our refinancing layout. Professional, polite, and deeply accurate reports that bank underwriters accepted instantly."</p>
-                    <p class="reviewer-name">- Sarah M., Refinance Client</p>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Exceptional market insight. They helped us understand our true equity during an estate valuation process. Highly recommend their local expertise."</p>
+                    <div class="reviewer-name">David T. — Sterling, VA</div>
+                    <i class="fas fa-quote-right quote-icon"></i>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section class="faqs section-padding">
+    <section id="faq" class="faq">
         <div class="container">
             <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-container">
-                
+            <p class="section-subtitle">Everything You Need to Know About the Appraisal Process</p>
+            
+            <div class="faq-wrapper">
                 <div class="faq-item">
-                    <div class="faq-question"><i class="fas fa-chevron-right"></i> Why do I need a certified home appraisal?</div>
-                    <div class="faq-answer">An independent appraisal ensures that financial lenders, courts, or property buyers receive an objective valuation to mitigate property investment risks.</div>
+                    <div class="faq-question">What is a home appraisal? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A home appraisal is an unbiased professional opinion of a home's value based on similar, recent property sales in the immediate neighborhood, physical conditions, and structural evaluations.</div>
                 </div>
-
                 <div class="faq-item">
-                    <div class="faq-question"><i class="fas fa-chevron-right"></i> How long does a standard property appraisal take?</div>
-                    <div class="faq-answer">While the on-site walkthrough inspection takes roughly 30–60 minutes, the complete verified report takes 3–5 business days to meticulously finalize.</div>
+                    <div class="faq-question">Why do I need a certified appraisal report? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Certified reports ensure that lenders, courts, or tax boards receive accurate and legal valuation structures for home purchases, estate setups, refinancing, or divorce proceedings.</div>
                 </div>
-
+                <div class="faq-item">
+                    <div class="faq-question">How long does an appraisal process take? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">An on-site property inspection typically ranges from 30 minutes to a few hours, while the comprehensive final certified documentation is finalized within a few business days.</div>
+                </div>
             </div>
         </div>
     </section>
 
     <footer id="contact">
         <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>AD Brown Appraisal</h4>
+                <p style="color: #D1D5DB; font-size: 0.95rem;">Providing unmatched local market precision and real estate asset analysis throughout Aldie and surrounding communities.</p>
+                <div style="margin-top: 20px;">
+                    <a href="https://g.page/r/CTrGKFBm9oFvEBM/" target="_blank" class="btn-gold" style="padding: 10px 20px; font-size:0.75rem;">View Google Profile</a>
+                </div>
+            </div>
             
-            <div>
-                <h3 class="footer-heading">Quick Links</h3>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
                 <ul class="footer-links">
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="https://adbrownappraisal.com" target="_blank">Blog</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#faq">FAQs</a></li>
                 </ul>
             </div>
-
-            <div>
-                <h3 class="footer-heading">Contact Information</h3>
+            
+            <div class="footer-col">
+                <h4>Contact Details</h4>
                 <ul class="contact-info-list">
-                    <li><i class="fas fa-map-marker-alt"></i> 41923 Beryl Terrace, Aldie, VA, 20105</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 41923 Beryl Terrace, Aldie, VA 20105, USA</li>
                     <li><i class="fas fa-phone-alt"></i> (703) 541-8212</li>
                     <li><i class="fas fa-envelope"></i> rugertee@yahoo.com</li>
                     <li><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM – 5:00 PM</li>
-                    <li><i class="fas fa-website"></i> https://adbrownappraisal.com</li>
                 </ul>
             </div>
-
-            <div>
-                <h3 class="footer-heading">Our Location</h3>
+            
+            <div class="footer-col">
+                <h4>Location View</h4>
                 <div class="map-container">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52430.248580343316!2d-77.56406801129947!3d38.92636946457516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b641d08c75cc91%3A0x6f81f6665028c63a!2sAD%20Brown%20Appraisals!5e1!3m2!1sen!2s!4v1782837744376!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
             </div>
-
         </div>
-
+        
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026 The Ranking Geeks. All Rights Reserved.</p>
+                &copy; 2026 The Ranking Geeks. All Rights Reserved.
             </div>
         </div>
     </footer>
 
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                
+                // Toggle active class
+                faqItem.classList.toggle('active');
+                
+                // Collapse other items (Optional luxury UI experience)
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
